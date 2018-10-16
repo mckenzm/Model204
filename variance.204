@@ -1,0 +1,47 @@
+* simple demo
+*------------------------------------------------------------*
+* Find variance of distance from origin for coordinate list. *
+*------------------------------------------------------------*
+b
+class point
+    public
+       constructor new (%x is float, %y is float)
+       variable x is float
+       variable y is float
+    end public
+
+    constructor new (%x is float, %y is float)
+       %this:x = %x
+       %this:y = %y
+    end constructor
+end class
+
+*------------------------------------------------------------*
+* Calculate distance from origin. (Pythagorean hypotenuse)   *
+*------------------------------------------------------------*
+local function (point):distance is float
+   return (%this:x:toPower(2)+%this:y:toPower(2)):squareRoot
+end function
+
+%al is arrayList of object point
+
+%al = new
+%al:add(new(1,1))
+%al:add(new(3,4))
+%al:add(new(-5,12))
+%al:add(new(0,0))
+%al:add(new(-1,-1))
+
+*------------------------------------------------------------*
+* Amazingly, this abbreviated notation works and function is *
+* evaluated for each member of list for variance calculation.*
+*------------------------------------------------------------*
+skip 2 lines
+for %i from 1 to %al:count
+   print %i with %al(%i):distance              at 12
+end for
+
+print "-----------------"                      at 12
+print "variance: " with %al:variance(distance) at 12
+skip 2 lines
+end
