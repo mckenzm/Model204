@@ -1,0 +1,23 @@
+* simple loop
+begin
+   variables are undefined
+   %var1 is float initial(0)
+   %var2 is float initial(0)
+   %var3 is float initial(0)
+
+   skip 1 line
+   print ' n' with 'squ' at 7 with 'cube' at 14
+   print '--' with '---' at 7 with '----' at 14
+
+   repeat 14 times
+      %var1=@+1
+      %var2=%var1:toPower(2)
+      %var3=%var1:toPower(3)
+      print $edit(%var1,'Z9')        -
+       with $edit(%var2,'ZZ9')  at 7 -
+       with $edit(%var3,'ZZZ9') at 14
+   end repeat
+
+   skip 2 lines
+
+end
