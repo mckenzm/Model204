@@ -1,7 +1,7 @@
-* simple demo
-*------------------------------------------------------------*
-* Find variance of distance from origin for coordinate list. *
-*------------------------------------------------------------*
+* simple demo adapted from https://m204wiki.rocketsoftware.com/index.php/Variance_(Arraylist_function)
+*-----------------------------------------------------------------------------*
+* Find variance of distance from origin for coordinate list.                  *
+*-----------------------------------------------------------------------------*
 b
 class point
     public
