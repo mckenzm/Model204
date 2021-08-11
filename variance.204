@@ -33,8 +33,7 @@ end function
 %al:add(new(-1,-1))
 
 *------------------------------------------------------------*
-* Amazingly, this abbreviated notation works and function is *
-* evaluated for each member of list for variance calculation.*
+* Useful applications obvious.                               *
 *------------------------------------------------------------*
 skip 2 lines
 for %i from 1 to %al:count
@@ -42,6 +41,9 @@ for %i from 1 to %al:count
 end for
 
 print "-----------------"                      at 12
+*------------------------------------------------------------*
+* Having this canned is the amazing bit.                     *
+*------------------------------------------------------------*
 print "variance: " with %al:variance(distance) at 12
 skip 2 lines
 end
